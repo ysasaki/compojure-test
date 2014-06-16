@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/heroku-test-standalone.jar clojure.main -m heroku-test.handler $PORT
+web: java $JVM_OPTS -jar target/heroku-test-standalone.jar $PORT

@@ -7,6 +7,7 @@
   :plugins [[lein-ring "0.8.10"]]
   :uberjar-name "heroku-test-standalone.jar"
   :main heroku-test.handler
+  :aot [heroku-test.handler]
   :ring {:handler heroku-test.handler/app}
   :profiles
   {:dev {:dependencies [[javax.servlet/servlet-api "2.5"]

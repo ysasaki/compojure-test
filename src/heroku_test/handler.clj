@@ -1,4 +1,5 @@
 (ns heroku-test.handler
+  (:gen-class)
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
