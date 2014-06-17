@@ -3,7 +3,7 @@
   (:use compojure.core)
   (:require [compojure.handler :as handler]
             [compojure.route :as route]
-            [ring.adapter.jetty :as jetty]))
+            [org.httpkit.server :as httpkit :only [run-server]]))
 
 (defroutes app-routes
   (GET "/" [] "Hello World")
@@ -14,4 +14,4 @@
   (handler/site app-routes))
 
 (defn -main [port]
-  (jetty/run-jetty app {:port (Integer. port) :join? false}))
+  (httpkit/run-server app {:port (Integer. port)}))
